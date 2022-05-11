@@ -19,6 +19,8 @@ if __name__ == '__main__':
     # (len) de un string pasado como parámetro
 
     # len_string = lambda......
+    len_string = lambda t: len(t)
+    len_cadena = len_string('matrices') #para probar =P
 
     # 2)
     # Lista de string
@@ -35,5 +37,7 @@ if __name__ == '__main__':
     # directamente la lambda.
 
     # palabras_len = list(map....)
+    palabras_len = list(map(lambda t: len(t), palabras))
+    print('Verifico que se haya aplicado map correctamente, y que el output sea una lista con el nro. de caracateres de cada elemento:\n',palabras_len)
 
     print("terminamos")

@@ -12,6 +12,8 @@
 
 # IMPORTANTE: NO borrar los comentarios en VERDE o NARANJA
 
+import random
+
 '''
 Enunciado:
 Empecemos a jugar con las listas y su métodos, el objetivo
@@ -32,5 +34,20 @@ if __name__ == '__main__':
     print('Comenzamos a divertirnos!')
     # A partir de aquí escriba el código que resuelve el enunciado
     # Leer el enunciado con atención y consultar cualquier duda
+
+    generar_lista = random.sample(range(1,11),3)
+
+    suma = sum(generar_lista)
+
+    #print('Print de prueba: ',generar_lista)
+
+    resultados = [x for x in generar_lista if sum(generar_lista)<=21]
+    
+    if suma <=21:
+        print(f'La suma de los números recolectados es {suma}. Resultado de la partida: {resultados}.')
+    else:
+        print(f'¡Partida perdida! La suma de los números recolectados es {suma}. ')    
+
+    #----Sugerencias para evitar este último if/else?---
 
     print("terminamos")
