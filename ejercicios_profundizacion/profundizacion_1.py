@@ -35,19 +35,15 @@ if __name__ == '__main__':
     # A partir de aquí escriba el código que resuelve el enunciado
     # Leer el enunciado con atención y consultar cualquier duda
 
-    generar_lista = random.sample(range(1,11),3)
+    generar_lista = [random.randint(1,11) for x in range(3)]
 
-    suma = sum(generar_lista)
+    generar_lista_filtrada = [x for x in generar_lista if sum(generar_lista)<=21]
 
-    #print('Print de prueba: ',generar_lista)
+    resultado = [{'Tiro': generar_lista_filtrada, 'Suma': sum(generar_lista_filtrada)} if len(generar_lista_filtrada) !=0 else 'Perdiste. La suma de mano superó los 21 puntos']
 
-    resultados = [x for x in generar_lista if sum(generar_lista)<=21]
-    
-    if suma <=21:
-        print(f'La suma de los números recolectados es {suma}. Resultado de la partida: {resultados}.')
-    else:
-        print(f'¡Partida perdida! La suma de los números recolectados es {suma}. ')    
+    print(resultado)
 
-    #----Sugerencias para evitar este último if/else?---
+    #----Versión modificada sin if/else al final =)---#
 
     print("terminamos")
+    

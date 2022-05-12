@@ -26,7 +26,7 @@ if __name__ == '__main__':
     # para aplicar en este caso.
     list_numeros_str = ['5', '2', '3', '', '7', 'NaN'] 
     
-    list_numeros_filtrada = [int(x) if x.isdigit() is True else 0 for x in list_numeros_str]
+    list_numeros_filtrada = [int(x) if x.isdigit() else 0 for x in list_numeros_str]
 
     print('Verificación:', list_numeros_filtrada)
 

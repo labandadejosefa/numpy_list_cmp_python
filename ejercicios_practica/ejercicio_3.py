@@ -22,6 +22,7 @@ if __name__ == '__main__':
 
     # lista_0_10 = [......]
     lista_0_10 = [x for x in range(11)]
+
     print('Verificación de Ejercicio 1): ',lista_0_10)
 
     # 2)
@@ -36,7 +37,9 @@ if __name__ == '__main__':
     # elemento lo multipliquen x5.
 
     # tabla_5 = [......]
-    tabla_5 = [5*i for i in range(11)]
+   
+    tabla_5 = [5*i for i in lista_0_10]
+
     print('\nVerificación de Ejercicio 2): ', tabla_5)
 
     # 3)
